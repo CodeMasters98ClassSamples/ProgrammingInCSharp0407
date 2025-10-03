@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrammingInCSharp0407", "ProgrammingInCSharp0407\ProgrammingInCSharp0407.csproj", "{5B89A190-2BCF-406B-86B0-21049824FB4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgrammingInCSharp0407", "ProgrammingInCSharp0407\ProgrammingInCSharp0407.csproj", "{5B89A190-2BCF-406B-86B0-21049824FB4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrammingInCSharp0407.Panel", "ProgrammingInCSharp0407.Panel\ProgrammingInCSharp0407.Panel.csproj", "{00016D30-19A6-403F-99A4-884680AF147F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgrammingInCSharp0407.Panel", "ProgrammingInCSharp0407.Panel\ProgrammingInCSharp0407.Panel.csproj", "{00016D30-19A6-403F-99A4-884680AF147F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DOCS", "DOCS", "{ABE6A7E4-CC02-4796-9660-2ECC185CAA73}"
 	ProjectSection(SolutionItems) = preProject

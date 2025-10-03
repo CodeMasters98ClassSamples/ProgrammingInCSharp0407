@@ -1,3 +1,5 @@
+using ProgrammingInCSharp0407.Panel.Forms;
+
 namespace ProgrammingInCSharp0407.Panel
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace ProgrammingInCSharp0407.Panel
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new UserManagmentForm());
         }
     }
 }
