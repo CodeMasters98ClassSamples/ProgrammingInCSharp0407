@@ -1,3 +1,5 @@
+using ProgrammingInCSharp0407.Panel.Forms;
+
 namespace ProgrammingInCSharp0407.Panel
 {
     public partial class Form1 : Form
@@ -22,12 +24,11 @@ namespace ProgrammingInCSharp0407.Panel
             //Database check
             //file check
 
-
             //hard code
             if (username == "admin" && password == "1234")
             {
-                MessageBox.Show("Valid Login");
-                //Route to another form
+                LayoutPanelForm form = new LayoutPanelForm();
+                form.ShowDialog();
             }
             else
             {

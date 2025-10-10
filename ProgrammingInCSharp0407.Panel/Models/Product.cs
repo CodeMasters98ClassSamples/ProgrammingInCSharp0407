@@ -4,6 +4,13 @@ namespace ProgrammingInCSharp0407.Panel.Models;
 
 internal class Product : BaseEntity 
 {
+    public Product() { }
+
+    public Product(string name,string code)
+    {
+        Name = name;
+        Code = code;
+    }
     
     public string Name { get; set; }
     public string Code { get; set; }

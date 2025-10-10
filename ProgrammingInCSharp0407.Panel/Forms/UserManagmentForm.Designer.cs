@@ -109,7 +109,7 @@
             // 
             regitserButton.Location = new Point(22, 96);
             regitserButton.Name = "regitserButton";
-            regitserButton.Size = new Size(248, 29);
+            regitserButton.Size = new Size(285, 29);
             regitserButton.TabIndex = 8;
             regitserButton.Text = "ثبت نام";
             regitserButton.UseVisualStyleBackColor = true;
@@ -117,9 +117,9 @@
             // 
             // resetRegistrationButton
             // 
-            resetRegistrationButton.Location = new Point(276, 96);
+            resetRegistrationButton.Location = new Point(313, 96);
             resetRegistrationButton.Name = "resetRegistrationButton";
-            resetRegistrationButton.Size = new Size(248, 29);
+            resetRegistrationButton.Size = new Size(281, 29);
             resetRegistrationButton.TabIndex = 9;
             resetRegistrationButton.Text = "ریست فرم";
             resetRegistrationButton.UseVisualStyleBackColor = true;

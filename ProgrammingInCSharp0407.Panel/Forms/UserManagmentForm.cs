@@ -1,4 +1,6 @@
-﻿using ProgrammingInCSharp0407.Panel.Models;
+﻿using ProgrammingInCSharp0407.Panel.Abstarctions;
+using ProgrammingInCSharp0407.Panel.Helpers;
+using ProgrammingInCSharp0407.Panel.Models;
 
 namespace ProgrammingInCSharp0407.Panel.Forms
 {
@@ -27,6 +29,11 @@ namespace ProgrammingInCSharp0407.Panel.Forms
             string nationalCode = nationalCodeTextBox.Text;
             string phoneNumber = phoneNumberTextBox.Text;
 
+            if (PhoneNumberHelper.IsValidPhoneNumber(phoneNumber))
+            {
+
+            }
+
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
             {
                 return;
@@ -45,6 +52,9 @@ namespace ProgrammingInCSharp0407.Panel.Forms
                 LastName = lastName,
                 FirstName = firstName,
             };
+            user.BirthDate = DateTime.Now.AddYears(-20);
+            List<User> users = new List<User>();
+            users.Add(user);
 
             User user1 = new User(nationalCode: "", phoneNumber: "");
             ResetForm();
