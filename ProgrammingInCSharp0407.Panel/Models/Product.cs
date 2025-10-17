@@ -4,7 +4,7 @@ namespace ProgrammingInCSharp0407.Panel.Models;
 
 internal class Product : BaseEntity 
 {
-    public Product() { }
+    public Product():base() { }
 
     public Product(string name,string code)
     {

@@ -9,7 +9,11 @@ namespace ProgrammingInCSharp0407.Panel.Models;
 /// </summary>
 internal class User : BaseEntity //Entity
 {
-    public User(string nationalCode,string phoneNumber)
+    public User() : base()
+    {
+    }
+
+    public User(string nationalCode,string phoneNumber): this()
     {
         if (string.IsNullOrEmpty(nationalCode) || string.IsNullOrEmpty(phoneNumber))
         {
@@ -25,6 +29,12 @@ internal class User : BaseEntity //Entity
         FirstName = firstName;
         LastName = lastName;
     }
+
+    public User(string nationalCode, string phoneNumber, string firstName, string lastName,DateTime birthDate) : this(nationalCode, phoneNumber,firstName,lastName)
+    {
+        _birthDate = birthDate;
+    }
+
 
     //access_modifier datatype name { get; set; }
     public string FirstName { get; set; }

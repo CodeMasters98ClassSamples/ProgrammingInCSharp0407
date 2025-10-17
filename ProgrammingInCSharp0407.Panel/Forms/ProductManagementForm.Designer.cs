@@ -34,6 +34,8 @@
             productDataGridView = new DataGridView();
             codeTextBox = new TextBox();
             label2 = new Label();
+            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)productDataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -87,11 +89,31 @@
             label2.TabIndex = 4;
             label2.Text = "نام محصول";
             // 
+            // button1
+            // 
+            button1.Location = new Point(173, 43);
+            button1.Name = "button1";
+            button1.Size = new Size(155, 35);
+            button1.TabIndex = 6;
+            button1.Text = "ریست فرم";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(334, 43);
+            button2.Name = "button2";
+            button2.Size = new Size(155, 35);
+            button2.TabIndex = 7;
+            button2.Text = "حذف";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // ProductManagementForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(codeTextBox);
             Controls.Add(label2);
             Controls.Add(productDataGridView);
@@ -113,5 +135,7 @@
         private DataGridView productDataGridView;
         private TextBox codeTextBox;
         private Label label2;
+        private Button button1;
+        private Button button2;
     }
 }

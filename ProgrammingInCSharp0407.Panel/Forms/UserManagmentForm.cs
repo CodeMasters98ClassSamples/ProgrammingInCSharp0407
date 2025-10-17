@@ -1,14 +1,16 @@
-﻿using ProgrammingInCSharp0407.Panel.Abstarctions;
-using ProgrammingInCSharp0407.Panel.Helpers;
+﻿using ProgrammingInCSharp0407.Panel.Helpers;
 using ProgrammingInCSharp0407.Panel.Models;
+using ProgrammingInCSharp0407.Panel.Services;
 
 namespace ProgrammingInCSharp0407.Panel.Forms
 {
     public partial class UserManagmentForm : Form
     {
+        UserService userService;
         public UserManagmentForm()
         {
             InitializeComponent();
+            userService = new UserService();
         }
 
         private void UserManagmentForm_Load(object sender, EventArgs e)
@@ -28,35 +30,32 @@ namespace ProgrammingInCSharp0407.Panel.Forms
             string lastName = lastNameTextBox.Text;
             string nationalCode = nationalCodeTextBox.Text;
             string phoneNumber = phoneNumberTextBox.Text;
+            DateTime birthDate = birthDateTimePicker.Value;
 
-            if (PhoneNumberHelper.IsValidPhoneNumber(phoneNumber))
+            //Validation
+            if (!PhoneNumberHelper.IsValidPhoneNumber(phoneNumber))
             {
-
+                MessageBox.Show("لطفا شماره تلفن همراه را به صورت صحصح وارد نمایید.");
+                return;
             }
 
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
             {
+                MessageBox.Show("لطفا اطلاعات خواسته شده را به صورت صحیح وارد نمایید.");
                 return;
             }
 
-            //DataType name
-            //User user = new User();
-            //User user = new();
-            //var user = new User();
-            //user.FirstName = firstName;
-            //user.LastName = lastName;
-            //user.NationalCode = nationalCode;
-            //user.PhoneNumber = phoneNumber;
-            User user = new User(nationalCode: nationalCode, phoneNumber: phoneNumber)
-            {
-                LastName = lastName,
-                FirstName = firstName,
-            };
-            user.BirthDate = DateTime.Now.AddYears(-20);
-            List<User> users = new List<User>();
-            users.Add(user);
 
-            User user1 = new User(nationalCode: "", phoneNumber: "");
+            //Object
+            User user = new User(nationalCode: nationalCode, phoneNumber: phoneNumber, firstName, lastName, birthDate);
+
+            //Object add to collection
+            userService.Add(user);
+
+            //Show data
+            FillDataGrid(userService.GetAll());
+
+            //Reset my form
             ResetForm();
         }
 
@@ -71,6 +70,13 @@ namespace ProgrammingInCSharp0407.Panel.Forms
             lastNameTextBox.Text = null;
             nationalCodeTextBox.Text = null;
             phoneNumberTextBox.Text = null;
+        }
+
+        private void FillDataGrid(List<User> myUsers)
+        {
+            userDataGridView.DataSource = null;
+            userDataGridView.DataSource = myUsers;
+            userDataGridView.Refresh();
         }
     }
 }

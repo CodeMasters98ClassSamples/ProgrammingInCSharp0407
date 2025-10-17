@@ -38,6 +38,12 @@
             label4 = new Label();
             regitserButton = new Button();
             resetRegistrationButton = new Button();
+            userDataGridView = new DataGridView();
+            birthDateTimePicker = new DateTimePicker();
+            label5 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)userDataGridView).BeginInit();
             SuspendLayout();
             // 
             // firstNameTextBox
@@ -107,7 +113,7 @@
             // 
             // regitserButton
             // 
-            regitserButton.Location = new Point(22, 96);
+            regitserButton.Location = new Point(22, 128);
             regitserButton.Name = "regitserButton";
             regitserButton.Size = new Size(285, 29);
             regitserButton.TabIndex = 8;
@@ -117,7 +123,7 @@
             // 
             // resetRegistrationButton
             // 
-            resetRegistrationButton.Location = new Point(313, 96);
+            resetRegistrationButton.Location = new Point(313, 128);
             resetRegistrationButton.Name = "resetRegistrationButton";
             resetRegistrationButton.Size = new Size(281, 29);
             resetRegistrationButton.TabIndex = 9;
@@ -125,11 +131,58 @@
             resetRegistrationButton.UseVisualStyleBackColor = true;
             resetRegistrationButton.Click += resetRegistrationButton_Click;
             // 
+            // userDataGridView
+            // 
+            userDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            userDataGridView.Location = new Point(22, 198);
+            userDataGridView.Name = "userDataGridView";
+            userDataGridView.Size = new Size(570, 296);
+            userDataGridView.TabIndex = 10;
+            // 
+            // birthDateTimePicker
+            // 
+            birthDateTimePicker.Location = new Point(97, 99);
+            birthDateTimePicker.Name = "birthDateTimePicker";
+            birthDateTimePicker.Size = new Size(497, 23);
+            birthDateTimePicker.TabIndex = 11;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(22, 105);
+            label5.Name = "label5";
+            label5.Size = new Size(54, 15);
+            label5.TabIndex = 12;
+            label5.Text = "تاریخ تولد";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(22, 163);
+            button1.Name = "button1";
+            button1.Size = new Size(285, 29);
+            button1.TabIndex = 13;
+            button1.Text = "حذف";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(313, 163);
+            button2.Name = "button2";
+            button2.Size = new Size(281, 29);
+            button2.TabIndex = 14;
+            button2.Text = "آپدیت";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // UserManagmentForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(606, 450);
+            ClientSize = new Size(606, 506);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(label5);
+            Controls.Add(birthDateTimePicker);
+            Controls.Add(userDataGridView);
             Controls.Add(resetRegistrationButton);
             Controls.Add(regitserButton);
             Controls.Add(label4);
@@ -143,6 +196,7 @@
             Name = "UserManagmentForm";
             Text = "UserManagmentForm";
             Load += UserManagmentForm_Load;
+            ((System.ComponentModel.ISupportInitialize)userDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -159,5 +213,10 @@
         private Label label4;
         private Button regitserButton;
         private Button resetRegistrationButton;
+        private DataGridView userDataGridView;
+        private DateTimePicker birthDateTimePicker;
+        private Label label5;
+        private Button button1;
+        private Button button2;
     }
 }
