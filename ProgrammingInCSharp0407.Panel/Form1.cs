@@ -26,9 +26,7 @@ namespace ProgrammingInCSharp0407.Panel
             rememberMeCheckBox.Enabled = false;
             //Database check
             //file check
-
             //hard code
-
             string pathUserLoginFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "UserLogin.json");
             if (!File.Exists(pathUserLoginFile))
             {

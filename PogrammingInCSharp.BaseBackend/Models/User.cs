@@ -1,13 +1,13 @@
-﻿using ProgrammingInCSharp0407.Panel.Abstarctions;
-using System.Runtime.CompilerServices;
+﻿
+using PogrammingInCSharp.BaseBackend.Abstarctions;
 
-namespace ProgrammingInCSharp0407.Panel.Models;
+namespace PogrammingInCSharp.BaseBackend.Models;
 
 /// <summary>
 /// noun for naming class
 /// AccessModiferi class NameClass 
 /// </summary>
-internal class User : BaseEntity //Entity
+public class User : BaseEntity //Entity
 {
     public User() : base()
     {

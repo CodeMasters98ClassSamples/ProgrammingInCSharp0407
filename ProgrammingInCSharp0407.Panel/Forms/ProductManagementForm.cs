@@ -1,5 +1,5 @@
-﻿using ProgrammingInCSharp0407.Panel.Models;
-using ProgrammingInCSharp0407.Panel.Services;
+﻿using PogrammingInCSharp.BaseBackend.Models;
+using PogrammingInCSharp.BaseBackend.Services;
 
 namespace ProgrammingInCSharp0407.Panel.Forms;
 
@@ -17,7 +17,7 @@ public partial class ProductManagementForm : Form
     {
         Product product = new Product(name: nameTextBox.Text, code: codeTextBox.Text);
         ProductService.Add(product);
-        FillDataGrid(ProductService.GetAll());  
+        FillDataGrid(ProductService.GetAll());
     }
 
     private void FillDataGrid(List<Product> myProducts)
@@ -27,4 +27,8 @@ public partial class ProductManagementForm : Form
         productDataGridView.Refresh();
     }
 
+    private void productDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    {
+
+    }
 }

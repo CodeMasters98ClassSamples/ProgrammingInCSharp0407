@@ -1,9 +1,9 @@
-﻿using ProgrammingInCSharp0407.Panel.Abstarctions;
-using ProgrammingInCSharp0407.Panel.Enums;
+﻿using PogrammingInCSharp.BaseBackend.Abstarctions;
+using PogrammingInCSharp.BaseBackend.Enums;
 
-namespace ProgrammingInCSharp0407.Panel.Models;
+namespace PogrammingInCSharp.BaseBackend.Models;
 
-internal class Order : BaseEntity
+public class Order : BaseEntity
 {
     public Order() :base()
     {

@@ -9,20 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\PogrammingInCSharp.BaseBackend\PogrammingInCSharp.BaseBackend.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Data\UserLogin.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\UserLogin.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,9 @@
-﻿using ProgrammingInCSharp0407.Panel.Interfaces;
-using ProgrammingInCSharp0407.Panel.Models;
+﻿using PogrammingInCSharp.BaseBackend.Interfaces;
+using PogrammingInCSharp.BaseBackend.Models;
 
-namespace ProgrammingInCSharp0407.Panel.Services;
+namespace PogrammingInCSharp.BaseBackend.Services;
 
-internal class ProductService : BaseService<Product>
+public class ProductService : BaseService<Product>
 {
     List<Product> products = new List<Product>();
     public void Add(Product product)

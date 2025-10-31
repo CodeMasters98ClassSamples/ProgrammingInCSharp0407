@@ -72,6 +72,7 @@
             productDataGridView.Name = "productDataGridView";
             productDataGridView.Size = new Size(776, 343);
             productDataGridView.TabIndex = 3;
+            productDataGridView.CellContentClick += productDataGridView_CellContentClick;
             // 
             // codeTextBox
             // 

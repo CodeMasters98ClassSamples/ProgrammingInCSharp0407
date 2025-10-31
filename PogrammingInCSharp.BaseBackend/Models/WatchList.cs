@@ -1,8 +1,8 @@
-﻿using ProgrammingInCSharp0407.Panel.Abstarctions;
+﻿using PogrammingInCSharp.BaseBackend.Abstarctions;
 
-namespace ProgrammingInCSharp0407.Panel.Models;
+namespace PogrammingInCSharp.BaseBackend.Models;
 
-internal class WatchList : BaseEntity
+public class WatchList : BaseEntity
 {
     public WatchList(): base()
     {

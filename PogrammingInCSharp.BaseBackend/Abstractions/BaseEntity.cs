@@ -1,6 +1,6 @@
-﻿namespace ProgrammingInCSharp0407.Panel.Abstarctions;
+﻿namespace PogrammingInCSharp.BaseBackend.Abstarctions;
 
-internal abstract class BaseEntity
+public abstract class BaseEntity
 {
     public BaseEntity()
     {

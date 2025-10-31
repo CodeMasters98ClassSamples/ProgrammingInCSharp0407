@@ -1,8 +1,8 @@
-﻿using ProgrammingInCSharp0407.Panel.Abstarctions;
+﻿using PogrammingInCSharp.BaseBackend.Abstarctions;
 
-namespace ProgrammingInCSharp0407.Panel.Models;
+namespace PogrammingInCSharp.BaseBackend.Models;
 
-internal class Product : BaseEntity 
+public class Product : BaseEntity 
 {
     public Product():base() { }
 
