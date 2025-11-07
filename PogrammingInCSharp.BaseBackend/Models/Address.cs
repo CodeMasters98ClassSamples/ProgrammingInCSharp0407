@@ -11,4 +11,13 @@ public class Address : BaseEntity
 
     public string Name { get; set; }
     public string PostalCode { get; set; }
+
+    private string _reciever;
+
+    public string Reciever
+    {
+        get { return _reciever; }
+        set { _reciever = value; }
+    }
+
 }
