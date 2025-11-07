@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using ProgrammingInCSharp0407.Panel.Forms;
+using ProgrammingInCSharp0407.Panel.Utilities;
 using ProgrammingInCSharp0407.Panel.Wrappers;
 using System;
 
@@ -23,6 +24,7 @@ namespace ProgrammingInCSharp0407.Panel
             //Business code
             string username = usernameTextBox.Text;
             string password = passwordTextBox.Text;
+
             rememberMeCheckBox.Enabled = false;
             //Database check
             //file check
