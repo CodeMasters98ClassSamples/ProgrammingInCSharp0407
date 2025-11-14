@@ -11,6 +11,8 @@ namespace ProgrammingInCSharp0407.Panel.Forms
         {
             InitializeComponent();
             userService = new UserService();
+
+            FillDataGrid(userService.GetAll());
         }
 
         private void UserManagmentForm_Load(object sender, EventArgs e)

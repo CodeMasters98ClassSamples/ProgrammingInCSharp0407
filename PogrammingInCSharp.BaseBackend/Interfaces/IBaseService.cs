@@ -1,6 +1,6 @@
 ﻿namespace PogrammingInCSharp.BaseBackend.Interfaces;
 
-public interface BaseService<T>
+public interface IBaseService<T>
 {
     void Add(T item);
     List<T> GetAll();

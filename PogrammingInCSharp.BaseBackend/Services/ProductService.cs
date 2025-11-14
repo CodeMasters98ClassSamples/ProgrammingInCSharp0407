@@ -3,7 +3,7 @@ using PogrammingInCSharp.BaseBackend.Models;
 
 namespace PogrammingInCSharp.BaseBackend.Services;
 
-public class ProductService : BaseService<Product>
+public class ProductService : IBaseService<Product>
 {
     List<Product> products = new List<Product>();
     public void Add(Product product)

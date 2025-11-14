@@ -3,7 +3,7 @@ using PogrammingInCSharp.BaseBackend.Models;
 
 namespace PogrammingInCSharp.BaseBackend.Services;
 
-public class AddressService : BaseService<Address>
+public class AddressService : IBaseService<Address>
 {
     public void Add(Address item)
     {

@@ -44,14 +44,14 @@ public class User : BaseEntity //Entity
     //public DateTime BirthDate { get; set; } //ShortHand
 
     //readonly propety
-    public int Age { get {
-            if (_birthDate == DateTime.MinValue)
-            {
-                throw new Exception();
-            }
-            return DateTime.Now.Year - _birthDate.Year ;    
-        } 
-    }
+    //public int Age { get {
+    //        if (_birthDate == DateTime.MinValue)
+    //        {
+    //            throw new Exception();
+    //        }
+    //        return DateTime.Now.Year - _birthDate.Year ;    
+    //    } 
+    //}
 
     //Full Property
     private DateTime _birthDate;//Feild

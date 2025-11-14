@@ -13,6 +13,8 @@ public class Order : BaseEntity
     public List<OrderItem> OrderItems { get; set; }
  
     public User User { get; set; }
+    public int UserId { get; set; }
+
     public DateTime CreatedAt { get; set; }
     public OrderStatus Status { get; set; }
 
