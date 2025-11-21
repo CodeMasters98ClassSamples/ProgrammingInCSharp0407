@@ -41,8 +41,11 @@
             userDataGridView = new DataGridView();
             birthDateTimePicker = new DateTimePicker();
             label5 = new Label();
+            deleteButton = new Button();
+            updateButton = new Button();
+            nationalCodeLabel = new Label();
+            textBox1 = new TextBox();
             button1 = new Button();
-            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)userDataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -134,10 +137,11 @@
             // userDataGridView
             // 
             userDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            userDataGridView.Location = new Point(22, 198);
+            userDataGridView.Location = new Point(22, 246);
             userDataGridView.Name = "userDataGridView";
-            userDataGridView.Size = new Size(570, 296);
+            userDataGridView.Size = new Size(570, 248);
             userDataGridView.TabIndex = 10;
+            userDataGridView.CellClick += userDataGridView_CellClick;
             // 
             // birthDateTimePicker
             // 
@@ -155,31 +159,61 @@
             label5.TabIndex = 12;
             label5.Text = "تاریخ تولد";
             // 
+            // deleteButton
+            // 
+            deleteButton.Location = new Point(22, 163);
+            deleteButton.Name = "deleteButton";
+            deleteButton.Size = new Size(285, 29);
+            deleteButton.TabIndex = 13;
+            deleteButton.Text = "حذف";
+            deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.Click += deleteButton_Click;
+            // 
+            // updateButton
+            // 
+            updateButton.Location = new Point(313, 163);
+            updateButton.Name = "updateButton";
+            updateButton.Size = new Size(281, 29);
+            updateButton.TabIndex = 14;
+            updateButton.Text = "آپدیت";
+            updateButton.UseVisualStyleBackColor = true;
+            updateButton.Click += updateButton_Click;
+            // 
+            // nationalCodeLabel
+            // 
+            nationalCodeLabel.AutoSize = true;
+            nationalCodeLabel.Location = new Point(22, 220);
+            nationalCodeLabel.Name = "nationalCodeLabel";
+            nationalCodeLabel.Size = new Size(40, 15);
+            nationalCodeLabel.TabIndex = 16;
+            nationalCodeLabel.Text = "کدملی";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(97, 217);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(173, 23);
+            textBox1.TabIndex = 15;
+            // 
             // button1
             // 
-            button1.Location = new Point(22, 163);
+            button1.Location = new Point(276, 217);
             button1.Name = "button1";
-            button1.Size = new Size(285, 29);
-            button1.TabIndex = 13;
-            button1.Text = "حذف";
+            button1.Size = new Size(316, 25);
+            button1.TabIndex = 17;
+            button1.Text = "جستجو";
             button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(313, 163);
-            button2.Name = "button2";
-            button2.Size = new Size(281, 29);
-            button2.TabIndex = 14;
-            button2.Text = "آپدیت";
-            button2.UseVisualStyleBackColor = true;
             // 
             // UserManagmentForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(606, 506);
-            Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(nationalCodeLabel);
+            Controls.Add(textBox1);
+            Controls.Add(updateButton);
+            Controls.Add(deleteButton);
             Controls.Add(label5);
             Controls.Add(birthDateTimePicker);
             Controls.Add(userDataGridView);
@@ -216,7 +250,10 @@
         private DataGridView userDataGridView;
         private DateTimePicker birthDateTimePicker;
         private Label label5;
+        private Button deleteButton;
+        private Button updateButton;
+        private Label nationalCodeLabel;
+        private TextBox textBox1;
         private Button button1;
-        private Button button2;
     }
 }

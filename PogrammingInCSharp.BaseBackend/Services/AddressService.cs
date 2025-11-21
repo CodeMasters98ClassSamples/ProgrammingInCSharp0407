@@ -21,4 +21,14 @@ public class AddressService : IBaseService<Address>
     {
         throw new NotImplementedException();
     }
+
+    public void Update(Address item)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Delete(int id)
+    {
+        throw new NotImplementedException();
+    }
 }

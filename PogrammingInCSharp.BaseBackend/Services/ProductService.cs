@@ -11,8 +11,18 @@ public class ProductService : IBaseService<Product>
         products.Add(product);
     }
 
+    public void Delete(int id)
+    {
+        throw new NotImplementedException();
+    }
+
     public List<Product> GetAll()
     {
         return products;
+    }
+
+    public void Update(Product item)
+    {
+        throw new NotImplementedException();
     }
 }

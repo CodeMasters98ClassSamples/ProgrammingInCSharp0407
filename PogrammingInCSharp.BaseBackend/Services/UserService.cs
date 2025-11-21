@@ -1,19 +1,16 @@
 ﻿using PogrammingInCSharp.BaseBackend.Interfaces;
 using PogrammingInCSharp.BaseBackend.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace PogrammingInCSharp.BaseBackend.Services;
 
 public class UserService : IBaseService<User>
 {
+    private const string connectionString = "Data Source=.;Initial Catalog=ProgrammingInCSharp0407Db;Trusted_Connection=True;";
+
     public void Add(User user)
     {
-
         //Connect Db
-        const string connectionString = "Data Source=.;Initial Catalog=ProgrammingInCSharp0407Db;Trusted_Connection=True;";
-
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             connection.Open();
@@ -34,15 +31,32 @@ public class UserService : IBaseService<User>
         }
     }
 
+    public void Delete(int id)
+    {
+        //Connect Db
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            string query = $"delete dbo.[User] where Id = @Id";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", id);
+
+            // Execute the insert query
+            int rowsAffected = command.ExecuteNonQuery();
+
+            //return rowsAffected > 0;
+        }
+    }
+
     public List<User> GetAll()
     {
         List<User> users = new List<User>();
 
         //Connect Db
-        const string connectionString = "Data Source=.;Initial Catalog=ProgrammingInCSharp0407Db;Trusted_Connection=True;";
-
+        
         //SqlServer Command or query -> Select Users From Db
-
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             connection.Open();
@@ -61,6 +75,8 @@ public class UserService : IBaseService<User>
                     Id = (int)reader["Id"],
                     FirstName = reader["FirstName"].ToString(),
                     LastName = reader["LastName"].ToString(),
+                    NationalCode = reader["NationalCode"].ToString(),
+                    PhoneNumber = reader["PhoneNumber"].ToString()
                 };
                 users.Add(user);
             }
@@ -69,5 +85,28 @@ public class UserService : IBaseService<User>
 
         //Return LIst<User>
         return users;
+    }
+
+    public void Update(User item)
+    {
+        //Connect Db
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            string query = $"update dbo.[User] set PhoneNumber = @PhoneNumber,FirstName = @FirstName,LastName = @LastName, NationalCode = @NationalCode where Id = @Id";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@FirstName", item.FirstName);
+            command.Parameters.AddWithValue("@LastName", item.LastName);
+            command.Parameters.AddWithValue("@PhoneNumber", item.PhoneNumber);
+            command.Parameters.AddWithValue("@NationalCode", item.NationalCode);
+            command.Parameters.AddWithValue("@Id", item.Id);
+
+            // Execute the insert query
+            int rowsAffected = command.ExecuteNonQuery();
+
+            //return rowsAffected > 0;
+        }
     }
 }

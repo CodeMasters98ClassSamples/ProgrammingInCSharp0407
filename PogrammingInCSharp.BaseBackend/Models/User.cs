@@ -35,7 +35,6 @@ public class User : BaseEntity //Entity
         _birthDate = birthDate;
     }
 
-
     //access_modifier datatype name { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
