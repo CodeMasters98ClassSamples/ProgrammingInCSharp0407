@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace PogrammingInCSharp.BaseBackend.Models
 {
-    internal class AdminUser : User
+    public class AdminUser : User
     {
+
+        public override void Register()
+        {
+
+        }
 
     }
 }

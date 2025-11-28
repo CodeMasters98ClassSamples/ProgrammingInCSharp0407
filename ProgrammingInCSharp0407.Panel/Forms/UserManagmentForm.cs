@@ -58,9 +58,12 @@ namespace ProgrammingInCSharp0407.Panel.Forms
             }
 
 
+            AdminUser admin = new PogrammingInCSharp.BaseBackend.Models.AdminUser();
+            admin.Register();
+
             //Object
             User user = new User(nationalCode: nationalCode, phoneNumber: phoneNumber, firstName, lastName, birthDate);
-
+            
             //Object add to collection
             userService.Add(user);
 

@@ -9,11 +9,14 @@ namespace PogrammingInCSharp.BaseBackend.Models;
 /// </summary>
 public class User : BaseEntity //Entity
 {
+    //rich domain
+    //DDD
+
     public User() : base()
     {
     }
 
-    public User(string nationalCode,string phoneNumber): this()
+    public User(string nationalCode, string phoneNumber) : this()
     {
         if (string.IsNullOrEmpty(nationalCode) || string.IsNullOrEmpty(phoneNumber))
         {
@@ -30,12 +33,13 @@ public class User : BaseEntity //Entity
         LastName = lastName;
     }
 
-    public User(string nationalCode, string phoneNumber, string firstName, string lastName,DateTime birthDate) : this(nationalCode, phoneNumber,firstName,lastName)
+    public User(string nationalCode, string phoneNumber, string firstName, string lastName, DateTime birthDate) : this(nationalCode, phoneNumber, firstName, lastName)
     {
         _birthDate = birthDate;
     }
 
     //access_modifier datatype name { get; set; }
+    //public string FirstName { get; private set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string PhoneNumber { get; set; }
@@ -59,6 +63,11 @@ public class User : BaseEntity //Entity
     {
         get { return _birthDate; }
         set { _birthDate = value; }
+    }
+
+    public virtual void Register()
+    {
+
     }
 
 }
